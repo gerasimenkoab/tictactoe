@@ -16,7 +16,7 @@ using std::time;
 #include<cmath>
 using std::abs;
 
-#include"tictactoe_class2.h"
+#include"tictactoe_class.h"
 
   TicTacToe::TicTacToe()
   {
@@ -46,9 +46,10 @@ using std::abs;
     srand(time(0));
   }
   
-  void TicTacToe::startGame( int playerId )
+//  void TicTacToe::startGame( int playerId )
+  void TicTacToe::startGame()
   {    
-    playerId = HUMAN;
+    int playerId = HUMAN;
     while ( nextTurn(playerId) == 0 )
     {
       playerId *= -1;
